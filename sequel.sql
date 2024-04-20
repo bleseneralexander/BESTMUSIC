@@ -1,5 +1,6 @@
 user bigmutha@localhost
   local 127.0.0.1
+  MyHost, NewInst
 row with Column
 case row:
 column,
