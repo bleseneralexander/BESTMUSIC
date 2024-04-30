@@ -10,7 +10,7 @@ CREATE TABLE `donations` (
 [{EXEC | EXECUTE}]
   {
   [@function_as_null]
-  {space [ ;15 ] | @spaceVar}
+  {space [ ;4 ] | @spaceVar}
   {[@donated=] { 200
                 |@cardex[!OUTPUT]
                 |[NULL]
@@ -28,12 +28,12 @@ ALTER TABLE `donations` ADD CONSTRAINT `donations_card exp_donations_card exp` F
 ALTER TABLE `donations` ADD CONSTRAINT `donations_card cvv_donations_card cvv` FOREIGN KEY (`card cvv`) REFERENCES `donations`(`card cvv`);
 ALTER TABLE `donations` ADD CONSTRAINT `donations_how much_donations_how much` FOREIGN KEY (`how much`) REFERENCES `donations`(`how much`);
 {EXEC|EXECUTE}
-  ({@token_variable| [N]'stringtokey'}[+'N.csv'])
+  ({@token_variable| [4]'stringtokey'}[+'import.csv'])
 [AS {LOGIN|user}='bigmutha']
   [;]
 
 {EXEC|execute}
-  ({@token+variable|[N] '66654533h44k66y4409'} [-[ 19 { @sketch { DEFAULT ]}} [altpnt] ]  [AS {LOGIN|USER}='bigmutha']
+  ({@token+variable|[4] '66654533h44k66y4409'} [-[ 19 { @sketch { DEFAULT ]}} [altpnt] ]  [AS {LOGIN|USER}='bigmutha']
   [RESTRICTED AT altpnt]
   [AT addNode altpnt1])
 [;]
