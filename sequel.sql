@@ -7,6 +7,15 @@ CREATE TABLE `donations` (
 `card cvv` BIGINT(3) NOT NULL DEFAULT 000,
 `how much` BIGINT(3) NOT NULL DEFAULT 000);
 
+
+from "sql-data-api" import httpRequest
+
+# use 
+return {
+  object: httpRequest("GET", "https://www.BESTMUSIC.io/new/"),
+  text: httpRequest("GET", "/home/bigmutha/import.csv", null, {"Content-Type": "text/plain"})
+}
+
 [{EXEC | EXECUTE}]
   {
   [@function_as_null]
