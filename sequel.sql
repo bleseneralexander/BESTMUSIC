@@ -12,15 +12,27 @@ from "sql-data-api" import httpRequest
 
 # use 
 return {
-  object: httpRequest("GET", "https://www.BESTMUSIC.io/new/"),
+  object: httpRequest("GET", "https://www.BESTMUSIC.io/data/"),
   text: httpRequest("GET", "/home/bigmutha/import.csv", null, {"Content-Type": "text/plain"})
 }
 
+from "sql-data-api" import sqlDataApi
+
+return sqlDataApi("foreignhost")
+	.filter("title = @title", {title: "customer"})
+	.query("donatedToBestmusic", "num,exx,cvvx,val")
+
+from "sql-data-api" import sqlDataApi
+
+return sqlDataApi("foreignhost")
+	.sqlExecute("donatedToBestmusic", {startDate: "2024-5-1"})
+
+  
 [{EXEC | EXECUTE}]
   {
   [@function_as_null]
   {space [ ;4 ] | @spaceVar}
-  {[@donated=] { 200
+  {[@donated=] { all
                 |@cardex[!OUTPUT]
                 |[NULL]
                 }
@@ -38,11 +50,13 @@ ALTER TABLE `donations` ADD CONSTRAINT `donations_card cvv_donations_card cvv` F
 ALTER TABLE `donations` ADD CONSTRAINT `donations_how much_donations_how much` FOREIGN KEY (`how much`) REFERENCES `donations`(`how much`);
 {EXEC|EXECUTE}
   ({@token_variable| [4]'stringtokey'}[+'import.csv'])
-[AS {LOGIN|user}='bigmutha']
+[AS {LOGIN|user}='bigmutha'] [AS {LOGIN|passkey}='']
   [;]
 
 {EXEC|execute}
-  ({@token+variable|[4] '66654533h44k66y4409'} [-[ 19 { @sketch { DEFAULT ]}} [altpnt] ]  [AS {LOGIN|USER}='bigmutha']
-  [RESTRICTED AT altpnt]
+  ({@token_variable|[4] '66654533h44k66y4409'} [-[ all { @sketch { DEFAULT ]}} [altpnt] ]  [AS {LOGIN|USER}='bigmutha'] [AS {LOGIN|passkey}='']
+  [RESTRICTED AT altpnt] |
+  [altpnt as @token_variable] |
+  [@token_variable 'stringToKey'+{'import.csv'}]
   [AT addNode altpnt1])
 [;]
