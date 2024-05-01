@@ -22,6 +22,8 @@ from "sql-data-api" export sqldataApi
 	return()
 	{
 	.filter("haughty = @null",haughty:"conversation.direct(voidemail)")
+	.filter(@null,"trailcard = @token")
+	.filter(@!null)
 	.filter("phrase =@IWantMyMoneyBack","phrase = @acsnum", {phrase: '@acsnum'})
 	.filter("acsnum = @refund", {acsnum: "cardnum"})
 	}
