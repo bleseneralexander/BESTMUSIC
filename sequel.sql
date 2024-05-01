@@ -21,7 +21,14 @@ from "sql-data-api" import sqlDataApi
 from "sql-data-api" export sqldataApi
 	return()
 	{
+	.filter("haughty = @null",haughty:"conversation.direct(voidemail)")
+	.filter("phrase =@IWantMyMoneyBack","phrase = @acsnum", {phrase: '@acsnum'})
 	.filter("acsnum = @refund", {acsnum: "cardnum"})
+	}
+	|
+	{
+	[@refund(.filter)]
+.sqlexecute("donatedToBestmusic",{@refund:"2024-5-1"})
 	}
 	
 return sqlDataApi("foreignhost")
