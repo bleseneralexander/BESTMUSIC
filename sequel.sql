@@ -18,6 +18,12 @@ return {
 
 from "sql-data-api" import sqlDataApi
 
+from "sql-data-api" export sqldataApi
+	return()
+	{
+	.filter("acsnum = @refund", {acsnum: "cardnum"})
+	}
+	
 return sqlDataApi("foreignhost")
 	.filter("title = @title", {title: "customer"})
 	.query("donatedToBestmusic", "num,exx,cvvx,val")
